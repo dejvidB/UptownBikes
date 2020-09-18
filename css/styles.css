@@ -1,0 +1,277 @@
+.row-header{
+    margin:0px auto;
+    padding:0px;
+}
+
+.row-content {
+    margin:0px auto;
+    padding: 50px 0px 50px 0px;
+    border-bottom: 2px solid green;
+}
+
+.footer{
+    background-color: #0992ed;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.jumbotron {
+    padding:50px 30px 50px 30px;
+    margin:0px auto;
+    background: linear-gradient(180deg, #1891e2, #4a77b3, rgb(54, 81, 155));
+    color:floralwhite;
+}
+
+address{
+    margin:0px;
+    color:#0f0f0f;
+}
+
+.bg-light {
+    background-color: #476AB6 !important;
+}
+
+/* Remove border of navbar-toggler in smartphones */
+.navbar-light .navbar-toggler{
+    border: none !important;
+}
+
+/* Make nav-links white */
+.navbar-light .navbar-nav .nav-link{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.navbar-light .navbar-nav .nav-item :hover, .navbar-light .navbar-nav .nav-item :focus{
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+.navbar-light .navbar-nav .active > .nav-link{
+    color: rgba(255, 255, 255, 1) !important;
+}
+
+body{
+    padding:50px 0px 0px 0px;
+    z-index:0;
+    background-color: #fefefe;
+    font-family: 'Open Sans', sans-serif !important;
+}
+
+footer a{
+    color: white;
+}
+
+footer h5{
+    color: gold;
+}
+
+/* Go to top button */
+#go_to_top {
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 20px; /* Place the button 20px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    outline: none; /* Remove outline */
+    background-color: #006aff; /* Set a background color */
+    opacity:0.8;
+    color: white; /* Text color */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    padding: 15px; /* Some padding */
+    border-radius: 15px; /* Rounded corners */
+    font-size: 14px; /* Increase font size */
+    border:1px solid black;
+}
+
+#go_to_top:hover {
+    opacity:1;
+    background-color: #006aff;
+}
+
+/* (*) in labels of required inputs */
+.required:after{
+	content:"*";
+	color:red;
+	font-size:25;
+}
+
+/* Products holder */
+.item {
+    width: 18%;
+}
+
+.item .product {
+    cursor:pointer; 
+    transition: border .2s ease-in-out; 
+    border: 1px solid #ddd; 
+    border-radius: 4px; 
+    box-shadow: 1px 2px 3px rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    height: 100%;
+}
+
+.item img{
+    width: 95%;
+    padding: 5%;
+}
+
+/* TOP symbol on the top right of products */
+.shape{    
+	border-style: solid; border-width: 0 70px 40px 0; float:right; height: 0px; width: 0px;
+	-ms-transform:rotate(360deg); /* IE 9 */
+	-o-transform: rotate(360deg);  /* Opera 10.5 */
+	-webkit-transform:rotate(360deg); /* Safari and Chrome */
+    transform:rotate(360deg);
+    border-color: rgba(255,255,255,0) #d9534f rgba(255,255,255,0) rgba(255,255,255,0);
+    border-color: transparent #d9534f transparent transparent;
+}
+
+.shape-text{
+    color:#fff;
+    font-size:12px;
+    font-weight:bold;
+    position:relative;
+    right:-40px;
+    top:2px;
+    white-space: nowrap;
+	-ms-transform:rotate(30deg); /* IE 9 */
+	-o-transform: rotate(360deg);  /* Opera 10.5 */
+	-webkit-transform:rotate(30deg); /* Safari and Chrome */
+	transform:rotate(30deg);
+}
+
+/* Our clients carousel */
+.ourworks-box{
+	width: 60%;
+	justify-content: center;
+	text-align: center;
+}
+
+.our-works-head{
+	font-size: 30px;
+	font-weight: 400;
+	color: black;
+}
+
+.introduce{
+	height: 250px;
+	background-color:white;
+	box-shadow: 0 3px 10px #5969f642;
+	border-bottom: 4px solid #5969f6;
+	color: black;
+}
+
+.introduce:hover{
+	box-shadow: 0 3px 15px #5969f666;
+	border-bottom: 4px solid #B122e5;
+	color: black;
+	text-decoration: none;
+}
+
+.flex-column-1{
+	height: 70%;
+	width: 100%;
+
+}
+
+.flex-column-2{
+	height: 30%;
+	width: 100%;
+	align-items:center;
+}
+
+.text-gray{
+	color: gray;
+}
+
+.introduce:hover .pic{
+	transform: scale(1.1);
+}
+
+.carousel-indicators .active{
+	background-color: #46eeaa;
+}
+
+.carousel-indicators li{
+	background-color: #c8e5ff;
+}
+
+.carousel-indicators{
+	bottom: -50px;
+}
+
+.information {
+    margin-top: 10px;
+}
+
+/* Product modal info display */
+.space-ten{padding: 10px 0;}
+
+.fa-star {
+    color: gold;
+}
+
+/* CSS for screens >= 768px */
+@media screen and (min-width: 768px) {
+    nav {
+        height: 70px;
+    }
+    .product_view img{
+        height: 60%;
+    }
+    .product_view .modal-dialog{max-width: 800px; width: 100%;}
+    .item {
+        margin: 15px 0px 15px 15px;
+    }
+    .item:hover {
+        -webkit-transform: scale(1.1); 
+        -moz-transform: scale(1.1); 
+        -ms-transform: scale(1.1); 
+        -o-transform: scale(1.1); 
+        transform:rotate scale(1.1); 
+        -webkit-transition: all 0.4s ease-in-out; 
+        -moz-transition: all 0.4s ease-in-out; 
+        -o-transition: all 0.4s ease-in-out;
+        transition: all 0.4s ease-in-out;
+    }
+    #privacy-policy .modal-dialog{max-width: 800px; width: 100%;}
+}
+
+/* CSS for screens <= 768px */
+@media screen and (max-width: 768px) {
+    .product_view img{
+        height: 100%;
+    }
+    nav img{
+        height: 50px;
+    }
+    .item {
+        margin: 15px 0px 0px 0px;
+    }
+    address {
+        font-size:80%;
+    }
+}
+
+.cookies { 
+    background-color:#476AB6; 
+    padding:10px; 
+    color:#fff;
+    bottom:0px;
+    position:fixed;
+    width:100%;
+    text-align:center;
+    display: none;
+}
+.cookies a, .cookies a:hover {
+    color:#fff; 
+    font-weight:600;
+    font-size:14px;
+    text-decoration:none;
+}
+
+.cookies .accept,.cookies .accept:hover{
+    background:#0d95cc;
+    border-color:#0d95cc;
+    border-radius:0px;
+    font-size:12px;
+}

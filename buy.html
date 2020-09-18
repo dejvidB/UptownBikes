@@ -1,0 +1,905 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags always come first -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- Bootstrap CSS -->
+    <!-- build:css css/main.css -->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <link href="css/styles.css" rel="stylesheet">
+    <!-- endbuild -->
+    <link rel="stylesheet"
+        href="https://www.cssscript.com/demo/animated-customizable-range-slider-pure-javascript-rslider-js/css/rSlider.min.css">
+    <title>Uptown Bikes | Buy bikes</title>
+</head>
+
+<div class="modal fade product_view" id="product_view">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title"></h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6 product_img">
+                        <img src="#" class="img-responsive" width="100%">
+                    </div>
+                    <div class="col-md-6 product_content">
+                        <p class="product_id"></p>
+                        <div class="rating">
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            <span class="fa fa-star"></span>
+                            (10 reviews)
+                        </div>
+                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
+                            been the industry's standard dummy text ever since the 1500s, when an unknown printer took a
+                            galley of type and scrambled it to make a type specimen book.Lorem Ipsum is simply dummy
+                            text of the printing and typesetting industry.</p>
+                        <h3 class="cost"></h3>
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col-md-6 col-sm-6 col-xs-12">
+                                <select class="form-control" name="select">
+                                    <option value="" selected="">Color</option>
+                                    <option value="black">Black</option>
+                                    <option value="white">White</option>
+                                    <option value="gold">Gold</option>
+                                    <option value="rose gold">Rose Gold</option>
+                                </select>
+                            </div>
+                            <div class="col-md-6 col-xs-12">
+                                <input type="number" name="qty" id="qty" min="1" placeholder="Quantity"
+                                    class="form-control input-lg">
+                            </div>
+                        </div>
+                        <div class="space-ten"></div>
+                        <div class="btn-ground">
+                            <button type="button" class="btn btn-success" id="add_to_cart"><span
+                                    class="fa fa-shopping-cart"></span> Add To Cart </button>
+                            <button type="button" class="btn btn-danger"><span class="fa fa-heart"></span> Add To
+                                Wishlist</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-light" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="privacy-policy">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title">Privacy Policy</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+            </div>
+            <div class="modal-body">
+                <p>Last updated: July 27, 2020</p>
+                <p>This Privacy Policy describes Our policies and procedures on the collection, use and disclosure of
+                    Your information when You use the Service and tells You about Your privacy rights and how the law
+                    protects You.</p>
+                <p>We use Your Personal data to provide and improve the Service. By using the Service, You agree to the
+                    collection and use of information in accordance with this Privacy Policy.</p>
+                <h1>Interpretation and Definitions</h1>
+                <h2>Interpretation</h2>
+                <p>The words of which the initial letter is capitalized have meanings defined under the following
+                    conditions. The following definitions shall have the same meaning regardless of whether they appear
+                    in singular or in plural.</p>
+                <h2>Definitions</h2>
+                <p>For the purposes of this Privacy Policy:</p>
+                <ul>
+                    <li>
+                        <p><strong>Account</strong> means a unique account created for You to access our Service or
+                            parts of our Service.</p>
+                    </li>
+                    <li>
+                        <p><strong>Company</strong> (referred to as either "the Company", "We", "Us" or "Our" in this
+                            Agreement) refers to Uptown Bikes, 50 W 72nd St NY 10023.</p>
+                    </li>
+                    <li>
+                        <p><strong>Cookies</strong> are small files that are placed on Your computer, mobile device or
+                            any other device by a website, containing the details of Your browsing history on that
+                            website among its many uses.</p>
+                    </li>
+                    <li>
+                        <p><strong>Country</strong> refers to: New York, United States</p>
+                    </li>
+                    <li>
+                        <p><strong>Device</strong> means any device that can access the Service such as a computer, a
+                            cellphone or a digital tablet.</p>
+                    </li>
+                    <li>
+                        <p><strong>Personal Data</strong> is any information that relates to an identified or
+                            identifiable individual.</p>
+                    </li>
+                    <li>
+                        <p><strong>Service</strong> refers to the Website.</p>
+                    </li>
+                    <li>
+                        <p><strong>Service Provider</strong> means any natural or legal person who processes the data on
+                            behalf of the Company. It refers to third-party companies or individuals employed by the
+                            Company to facilitate the Service, to provide the Service on behalf of the Company, to
+                            perform services related to the Service or to assist the Company in analyzing how the
+                            Service is used.</p>
+                    </li>
+                    <li>
+                        <p><strong>Third-party Social Media Service</strong> refers to any website or any social network
+                            website through which a User can log in or create an account to use the Service.</p>
+                    </li>
+                    <li>
+                        <p><strong>Usage Data</strong> refers to data collected automatically, either generated by the
+                            use of the Service or from the Service infrastructure itself (for example, the duration of a
+                            page visit).</p>
+                    </li>
+                    <li>
+                        <p><strong>Website</strong> refers to Uptown Bikes, accessible from <a
+                                href="https://cnc-wp1.ellak.gr/2020bSummerProjects/YourBicycleBusiness/DejvidDist/"
+                                rel="external nofollow noopener"
+                                target="_blank">https://cnc-wp1.ellak.gr/2020bSummerProjects/YourBicycleBusiness/DejvidDist/</a>
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>You</strong> means the individual accessing or using the Service, or the company, or
+                            other legal entity on behalf of which such individual is accessing or using the Service, as
+                            applicable.</p>
+                    </li>
+                </ul>
+                <h1>Collecting and Using Your Personal Data</h1>
+                <h2>Types of Data Collected</h2>
+                <h3>Personal Data</h3>
+                <p>While using Our Service, We may ask You to provide Us with certain personally identifiable
+                    information that can be used to contact or identify You. Personally identifiable information may
+                    include, but is not limited to:</p>
+                <ul>
+                    <li>
+                        <p>Email address</p>
+                    </li>
+                    <li>
+                        <p>First name and last name</p>
+                    </li>
+                    <li>
+                        <p>Phone number</p>
+                    </li>
+                    <li>
+                        <p>Address, State, Province, ZIP/Postal code, City</p>
+                    </li>
+                    <li>
+                        <p>Usage Data</p>
+                    </li>
+                </ul>
+                <h3>Usage Data</h3>
+                <p>Usage Data is collected automatically when using the Service.</p>
+                <p>Usage Data may include information such as Your Device's Internet Protocol address (e.g. IP address),
+                    browser type, browser version, the pages of our Service that You visit, the time and date of Your
+                    visit, the time spent on those pages, unique device identifiers and other diagnostic data.</p>
+                <p>When You access the Service by or through a mobile device, We may collect certain information
+                    automatically, including, but not limited to, the type of mobile device You use, Your mobile device
+                    unique ID, the IP address of Your mobile device, Your mobile operating system, the type of mobile
+                    Internet browser You use, unique device identifiers and other diagnostic data.</p>
+                <p>We may also collect information that Your browser sends whenever You visit our Service or when You
+                    access the Service by or through a mobile device.</p>
+                <h3>Tracking Technologies and Cookies</h3>
+                <p>We use Cookies and similar tracking technologies to track the activity on Our Service and store
+                    certain information. Tracking technologies used are beacons, tags, and scripts to collect and track
+                    information and to improve and analyze Our Service.</p>
+                <p>You can instruct Your browser to refuse all Cookies or to indicate when a Cookie is being sent.
+                    However, if You do not accept Cookies, You may not be able to use some parts of our Service.</p>
+                <p>Cookies can be "Persistent" or "Session" Cookies. Persistent Cookies remain on your personal computer
+                    or mobile device when You go offline, while Session Cookies are deleted as soon as You close your
+                    web browser.</p>
+                <p>We use both session and persistent Cookies for the purposes set out below:</p>
+                <ul>
+                    <li>
+                        <p><strong>Necessary / Essential Cookies</strong></p>
+                        <p>Type: Session Cookies</p>
+                        <p>Administered by: Us</p>
+                        <p>Purpose: These Cookies are essential to provide You with services available through the
+                            Website and to enable You to use some of its features. They help to authenticate users and
+                            prevent fraudulent use of user accounts. Without these Cookies, the services that You have
+                            asked for cannot be provided, and We only use these Cookies to provide You with those
+                            services.</p>
+                    </li>
+                    <li>
+                        <p><strong>Cookies Policy / Notice Acceptance Cookies</strong></p>
+                        <p>Type: Persistent Cookies</p>
+                        <p>Administered by: Us</p>
+                        <p>Purpose: These Cookies identify if users have accepted the use of cookies on the Website.</p>
+                    </li>
+                    <li>
+                        <p><strong>Functionality Cookies</strong></p>
+                        <p>Type: Persistent Cookies</p>
+                        <p>Administered by: Us</p>
+                        <p>Purpose: These Cookies allow us to remember choices You make when You use the Website, such
+                            as remembering your login details or language preference. The purpose of these Cookies is to
+                            provide You with a more personal experience and to avoid You having to re-enter your
+                            preferences every time You use the Website.</p>
+                    </li>
+                </ul>
+                <p>For more information about the cookies we use and your choices regarding cookies, please visit our
+                    Cookies Policy or the Cookies section of our Privacy Policy.</p>
+                <h2>Use of Your Personal Data</h2>
+                <p>The Company may use Personal Data for the following purposes:</p>
+                <ul>
+                    <li><strong>To provide and maintain our Service</strong>, including to monitor the usage of our
+                        Service.</li>
+                    <li><strong>To manage Your Account:</strong> to manage Your registration as a user of the Service.
+                        The Personal Data You provide can give You access to different functionalities of the Service
+                        that are available to You as a registered user.</li>
+                    <li><strong>For the performance of a contract:</strong> the development, compliance and undertaking
+                        of the purchase contract for the products, items or services You have purchased or of any other
+                        contract with Us through the Service.</li>
+                    <li><strong>To contact You:</strong> To contact You by email, telephone calls, SMS, or other
+                        equivalent forms of electronic communication, such as a mobile application's push notifications
+                        regarding updates or informative communications related to the functionalities, products or
+                        contracted services, including the security updates, when necessary or reasonable for their
+                        implementation.</li>
+                    <li><strong>To provide You</strong> with news, special offers and general information about other
+                        goods, services and events which we offer that are similar to those that you have already
+                        purchased or enquired about unless You have opted not to receive such information.</li>
+                    <li><strong>To manage Your requests:</strong> To attend and manage Your requests to Us.</li>
+                </ul>
+                <p>We may share your personal information in the following situations:</p>
+                <ul>
+                    <li><strong>With Service Providers:</strong> We may share Your personal information with Service
+                        Providers to monitor and analyze the use of our Service, to contact You.</li>
+                    <li><strong>For Business transfers:</strong> We may share or transfer Your personal information in
+                        connection with, or during negotiations of, any merger, sale of Company assets, financing, or
+                        acquisition of all or a portion of our business to another company.</li>
+                    <li><strong>With Affiliates:</strong> We may share Your information with Our affiliates, in which
+                        case we will require those affiliates to honor this Privacy Policy. Affiliates include Our
+                        parent company and any other subsidiaries, joint venture partners or other companies that We
+                        control or that are under common control with Us.</li>
+                    <li><strong>With Business partners:</strong> We may share Your information with Our business
+                        partners to offer You certain products, services or promotions.</li>
+                    <li><strong>With other users:</strong> when You share personal information or otherwise interact in
+                        the public areas with other users, such information may be viewed by all users and may be
+                        publicly distributed outside. If You interact with other users or register through a Third-Party
+                        Social Media Service, Your contacts on the Third-Party Social Media Service may see Your name,
+                        profile, pictures and description of Your activity. Similarly, other users will be able to view
+                        descriptions of Your activity, communicate with You and view Your profile.</li>
+                </ul>
+                <h2>Retention of Your Personal Data</h2>
+                <p>The Company will retain Your Personal Data only for as long as is necessary for the purposes set out
+                    in this Privacy Policy. We will retain and use Your Personal Data to the extent necessary to comply
+                    with our legal obligations (for example, if we are required to retain your data to comply with
+                    applicable laws), resolve disputes, and enforce our legal agreements and policies.</p>
+                <p>The Company will also retain Usage Data for internal analysis purposes. Usage Data is generally
+                    retained for a shorter period of time, except when this data is used to strengthen the security or
+                    to improve the functionality of Our Service, or We are legally obligated to retain this data for
+                    longer time periods.</p>
+                <h2>Transfer of Your Personal Data</h2>
+                <p>Your information, including Personal Data, is processed at the Company's operating offices and in any
+                    other places where the parties involved in the processing are located. It means that this
+                    information may be transferred to — and maintained on — computers located outside of Your state,
+                    province, country or other governmental jurisdiction where the data protection laws may differ than
+                    those from Your jurisdiction.</p>
+                <p>Your consent to this Privacy Policy followed by Your submission of such information represents Your
+                    agreement to that transfer.</p>
+                <p>The Company will take all steps reasonably necessary to ensure that Your data is treated securely and
+                    in accordance with this Privacy Policy and no transfer of Your Personal Data will take place to an
+                    organization or a country unless there are adequate controls in place including the security of Your
+                    data and other personal information.</p>
+                <h2>Disclosure of Your Personal Data</h2>
+                <h3>Business Transactions</h3>
+                <p>If the Company is involved in a merger, acquisition or asset sale, Your Personal Data may be
+                    transferred. We will provide notice before Your Personal Data is transferred and becomes subject to
+                    a different Privacy Policy.</p>
+                <h3>Law enforcement</h3>
+                <p>Under certain circumstances, the Company may be required to disclose Your Personal Data if required
+                    to do so by law or in response to valid requests by public authorities (e.g. a court or a government
+                    agency).</p>
+                <h3>Other legal requirements</h3>
+                <p>The Company may disclose Your Personal Data in the good faith belief that such action is necessary
+                    to:</p>
+                <ul>
+                    <li>Comply with a legal obligation</li>
+                    <li>Protect and defend the rights or property of the Company</li>
+                    <li>Prevent or investigate possible wrongdoing in connection with the Service</li>
+                    <li>Protect the personal safety of Users of the Service or the public</li>
+                    <li>Protect against legal liability</li>
+                </ul>
+                <h2>Security of Your Personal Data</h2>
+                <p>The security of Your Personal Data is important to Us, but remember that no method of transmission
+                    over the Internet, or method of electronic storage is 100% secure. While We strive to use
+                    commercially acceptable means to protect Your Personal Data, We cannot guarantee its absolute
+                    security.</p>
+                <h1>Your California Privacy Rights (California's Shine the Light law)</h1>
+                <p>Under California Civil Code Section 1798 (California's Shine the Light law), California residents
+                    with an established business relationship with us can request information once a year about sharing
+                    their Personal Data with third parties for the third parties' direct marketing purposes.</p>
+                <p>If you'd like to request more information under the California Shine the Light law, and if you are a
+                    California resident, You can contact Us using the contact information provided below.</p>
+                <h1>California Privacy Rights for Minor Users (California Business and Professions Code Section 22581)
+                </h1>
+                <p>California Business and Professions Code section 22581 allow California residents under the age of 18
+                    who are registered users of online sites, services or applications to request and obtain removal of
+                    content or information they have publicly posted.</p>
+                <p>To request removal of such data, and if you are a California resident, You can contact Us using the
+                    contact information provided below, and include the email address associated with Your account.</p>
+                <p>Be aware that Your request does not guarantee complete or comprehensive removal of content or
+                    information posted online and that the law may not permit or require removal in certain
+                    circumstances.</p>
+                <h1>Links to Other Websites</h1>
+                <p>Our Service may contain links to other websites that are not operated by Us. If You click on a third
+                    party link, You will be directed to that third party's site. We strongly advise You to review the
+                    Privacy Policy of every site You visit.</p>
+                <p>We have no control over and assume no responsibility for the content, privacy policies or practices
+                    of any third party sites or services.</p>
+                <h1>Changes to this Privacy Policy</h1>
+                <p>We may update our Privacy Policy from time to time. We will notify You of any changes by posting the
+                    new Privacy Policy on this page.</p>
+                <p>We will let You know via email and/or a prominent notice on Our Service, prior to the change becoming
+                    effective and update the "Last updated" date at the top of this Privacy Policy.</p>
+                <p>You are advised to review this Privacy Policy periodically for any changes. Changes to this Privacy
+                    Policy are effective when they are posted on this page.</p>
+                <h1>Contact Us</h1>
+                <p>If you have any questions about this Privacy Policy, You can contact us:</p>
+                <ul>
+                    <li>
+                        <p>By email: <a href="mailto:clients@uptownbikes.com">clients@uptownbikes.com</a></p>
+                    </li>
+                    <li>
+                        <p>By visiting this page on our website: <a href="./contactus.html"
+                                rel="external nofollow noopener" target="_blank">Contact us</a></p>
+                    </li>
+                    <li>
+                        <p>By phone number: <a href="tel:+917 6543 2100">+917 6543 2100</a></p>
+                    </li>
+                    <li>
+                        <p>By mail: <a href="https://www.google.com/maps/place/50+W+72nd+St,+New+York,+NY+10023,+USA">
+                                50 W 72nd St
+                                New York, NY 10023, USA
+                            </a></p>
+                    </li>
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <a href="#" class="accept btn btn-primary" data-dismiss="modal">Accept</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<body>
+    <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="./index.html"><img src="images/logo.png" height="90"></a>
+            <a class="navbar-brand d-md-none" href="#" style="color:white;"><i class="fa fa-shopping-cart"
+                    aria-hidden="true"></i> <span class="cart"></span></a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#Navbar">
+                <span class="navbar-toggler-icon"><i class="fa fa-bars" style="color:#fff; font-size:28px;"></i></span>
+            </button>
+            <div class="collapse navbar-collapse" id="Navbar">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="./index.html"><span class="fa fa-home"></span>
+                            HOME</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./aboutus.html"><span class="fa fa-info"></span>
+                            ABOUT US</a></li>
+                    <li class="nav-item"><a class="nav-link" href="./rent.html"><span class="fa fa-clock-o"></span>
+                            RENT</a>
+                    </li>
+                    <li class="nav-item active"><a class="nav-link" href="./buy.html"><span
+                                class="fa fa-credit-card"></span>
+                            BUY</a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="./contactus.html"><span
+                                class="fa fa-comments"></span>
+                            CONTACT US</a></li>
+                    <li class="nav-item d-none d-md-block"><a class="nav-link" href="#"><i
+                                class="fa fa-shopping-cart fa-lg" aria-hidden="true"></i> <span class="cart"></span>
+                        </a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="jumbotron">
+        <div class="container">
+            <div class="row row-header align-items-center">
+                <div class="col-12 col-sm-9">
+                    <h1 style="color: #6FDC6F;">Uptown Bikes</h1>
+                    <p>We provide the best bicycles in the market, at prices affordable by any company, with a single
+                        goal. <em>"To revolutionize the way people move from
+                            and to their job".</em></p>
+                </div>
+                <div class="col-12 col-sm-3">
+                    <img src="images/logo.png" class="img-fluid">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Buy</li>
+        </ol>
+    </nav>
+
+    <div class="container">
+        <!-- Price range import -->
+        <div class="container pt-5">
+            <input type="text" id="price_range" class="slider" />
+        </div>
+        <p id="results">20 bicycles were found.</p>
+        <div class="row row-content justify-content-center" id="products">
+            <div class="item col-12 col-md-3" alt-price="100" title="Bike #1">
+                <div class="product" id="1">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike1.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #1</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$150</span></span> $100</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="200" title="Bike #2">
+                <div class="product" id="2">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike2.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #2</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-20% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$250</span></span> $200</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="300" title="Bike #3">
+                <div class="product" id="3">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #3</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-14% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$350</span></span> $300</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="400" title="Bike #4">
+                <div class="product" id="4">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #4</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-11% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$450</span></span> $400</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="500" title="Bike #5">
+                <div class="product" id="5">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike5.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #5</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-9% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$550</span></span> $500</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="600" title="Bike #6">
+                <div class="product" id="6">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike6.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #6</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-7% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$650</span></span> $600</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="700" title="Bike #7">
+                <div class="product" id="7">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #7</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-6% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$750</span></span> $700</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="800" title="Bike #8">
+                <div class="product" id="8">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike6.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #8</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$850</span></span> $800</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="900" title="Bike #9">
+                <div class="product" id="9">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike1.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #9</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-5% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$950</span></span> $900</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1000" title="Bike #10">
+                <div class="product" id="10">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike2.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #10</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-4% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$1050</span></span> $1000</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1100" title="Bike #11">
+                <div class="product" id="11">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #11</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$1650</span></span> $1100</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1200" title="Bike #12">
+                <div class="product" id="12">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #12</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$1800</span></span> $1200</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1300" title="Bike #13">
+                <div class="product" id="13">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike6.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #13</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$1950</span></span> $1300</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1400" title="Bike #14">
+                <div class="product" id="14">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike1.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #14</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$2100</span></span> $1400</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1500" title="Bike #15">
+                <div class="product" id="15">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike2.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #15</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$2250</span></span> $1500</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1600" title="Bike #16">
+                <div class="product" id="16">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #16</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$2400</span></span> $1600</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1700" title="Bike #17">
+                <div class="product" id="17">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike4.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #17</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$2550</span></span> $1700</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1800" title="Bike #18">
+                <div class="product" id="18">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike5.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #18</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$2700</span></span> $1800</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="1900" title="Bike #19">
+                <div class="product" id="19">
+                    <div class="product-body"><img class="img-responsive" src="./images/bike6.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #19</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$2850</span></span> $1900</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+            <div class="item col-12 col-md-3" alt-price="2000" title="Bike #20">
+                <div class="product" id="20">
+                    <div class="shape">
+                        <div class="shape-text">
+                            TOP
+                        </div>
+                    </div>
+                    <div class="product-body"><img class="img-responsive" src="./images/bike3.jpeg" alt="...">
+                        <div>
+                            <h4 class="text-center">Bike #20</h4>
+                        </div>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><span
+                            style="color:yellow;background-color:red;font-size:18px;">-33% OFF!</span></div>
+                    <div>
+                        <h5 class="text-center"><span
+                                style="text-decoration: line-through; color:black; font-size:18px;"><span
+                                    style="color:red; font-size:20px">$3000</span></span> $2000</h5>
+                    </div>
+                    <div class="text-center" style="margin-top:auto;"><button class="btn btn-success" title="">Add to
+                            cart</button></div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="cookies">
+        <span>We collect and use cookies to give you the best and most relevant website experience. Kindly accept the
+            cookies. <a data-toggle="modal" href="#privacy-policy">Privacy Policy</a></span>
+        <a href="#" class="accept btn btn-primary">Accept</a>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-4 offset-sm-1 col-sm-2">
+                    <h5>Links</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./rent.html">Rent</a></li>
+                        <li><a href="./buy.html">Buy</a></li>
+                        <li><a href="./aboutus.html">About us</a></li>
+                        <li><a href="./contactus.html">Contact us</a></li>
+                        <li><a data-toggle="modal" href="#privacy-policy">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div class="col-5 col-sm-5">
+                    <h5>Our Address</h5>
+                    <address>
+                        <i class="fa fa-map-marker fa-lg" aria-hidden="true"></i>
+                        <a href="https://www.google.com/maps/place/50+W+72nd+St,+New+York,+NY+10023,+USA"> 50 W 72nd St
+                            New York, NY 10023, USA
+                        </a>
+                        <br>
+                        <i class="fa fa-phone fa-lg"></i> Tel.: <a href="tel:+917 6543 2100">+917 6543 2100</a><br>
+                        <i class="fa fa-fax fa-lg"></i> Fax: <a href="#">+917 6543 2101</a><br>
+                        <i class="fa fa-envelope fa-lg"></i> Email: <a
+                            href="mailto:clients@uptownbikes.com">clients@uptownbikes.com</a>
+                    </address>
+                </div>
+                <div class="col col-sm-4 align-self-center">
+                    <div style="text-align:center">
+                        <a class="btn btn-social-icon btn-facebook" href="http://www.facebook.com/profile.php?id="
+                            target="_blank">
+                            <i class="fa fa-facebook"></i></a>
+                        <a class="btn btn-social-icon btn-instagram" href="http://www.instagram.com/" target="_blank">
+                            <i class="fa fa-instagram"></i></a>
+
+                        <a class="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/" target="_blank">
+                            <i class="fa fa-linkedin"></i></a>
+                        <a class="btn btn-social-icon btn-twitter" href="http://twitter.com/" target="_blank">
+                            <i class="fa fa-twitter"></i></a>
+                        <a class="btn btn-social-icon btn-youtube" href="http://youtube.com/" target="_blank">
+                            <i class="fa fa-youtube"></i></a>
+                        <a class="btn btn-social-icon" href="mailto:clients@uptownbikes.com">
+                            <i class="fa fa-envelope-o"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p> &copy; Copyright 2020 Uptown Bikes</p>
+                </div>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-auto">
+                    <p> Designed by <a href="https://github.com/dejvidB" target="_blank">Dejvid Bushi</a></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <button id="go_to_top" title="Go to top"><i class="fa fa-arrow-up fa-lg"></i></button>
+
+    <!-- jQuery first, then Tether, then Bootstrap JS. -->
+    <!-- build:js js/main.js -->
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/tether/dist/js/tether.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+    <!-- endbuild -->
+    <script
+        src="https://www.cssscript.com/demo/animated-customizable-range-slider-pure-javascript-rslider-js/js/rSlider.min.js"></script>
+
+</body>
+
+</html>
